@@ -749,21 +749,21 @@ ready to turn up</div>
   <div class="frame-annotations">
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
-      <p><span class="ann-label">Summary:</span> Always-available public data view inside The Feed app. The user can switch between country, state, city, or county scopes via search or pre-set chips. The visualization uses the same proportional dot pattern as the onboarding data moments so the language and visual grammar stay consistent. Three states shown: United States (default), New York City (drill-down), and Search (typing a location).</p>
-      <p><span class="ann-label">User Action:</span> Toggles the map icon, searches or selects a city chip to change scope, and reads the coverage/prevalence card for that area.</p>
+      <p><span class="ann-label">Summary:</span> Public data view in The Feed app. User toggles between country, state, city, or county via search/chips. Same proportional dot pattern as kiosk data moments. Three states shown: US (default), NYC (drill-down), Search.</p>
+      <p><span class="ann-label">User Action:</span> Toggles map icon, searches or taps a city chip, reads the coverage/prevalence card.</p>
     </div>
 
     <div class="ann-section">
       <h4>Legal &amp; Compliance Language</h4>
-      <p><span class="ann-label">Why this language is here:</span> All figures trace back to AIDSVu 2023 and are displayed as published — no modeling, no inference. Every number is stated per 100,000 population per language guidelines. The "proportional representation · not geographic" disclaimer appears on every dot map. Labels use "on PrEP" and "living with HIV" — approved non-clinical phrasing.</p>
+      <p><span class="ann-label">Why this language is here:</span> All figures trace to AIDSVu 2023, displayed as published — no modeling. Numbers per 100,000 population. "Proportional representation · not geographic" disclaimer on every dot map. Labels use approved non-clinical phrasing.</p>
       <p><span class="ann-label">Concerns this addresses:</span></p>
       <ul>
-        <li>No clinical claims — data is observational, published-rates only</li>
-        <li>No individual is represented by a single dot — proportional disclaimer prevents misreading</li>
-        <li>User's personal PrEP answer is never overlaid on public data</li>
+        <li>No clinical claims — observational published rates only</li>
+        <li>Proportional disclaimer prevents single-dot misreading</li>
+        <li>User's personal PrEP answer never overlaid on public data</li>
       </ul>
-      <p><span class="ann-label">Source:</span> AIDSVu 2023 — national, state, and county HIV prevalence and PrEP coverage rates. All numbers display as published by AIDSVu.</p>
-      <p><span class="ann-label">Legal basis:</span> Public AIDSVu data. No PHI, no patient-level data. State HIV confidentiality statutes preserved — no user-specific surfaces on this view.</p>
+      <p><span class="ann-label">Source:</span> AIDSVu 2023 — national, state, and county HIV prevalence and PrEP coverage rates.</p>
+      <p><span class="ann-label">Legal basis:</span> Public AIDSVu data. No PHI. State HIV confidentiality statutes preserved.</p>
     </div>
 
     <div class="ann-section">
@@ -904,29 +904,23 @@ terms of use · privacy policy</div>
   <div class="frame-annotations">
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
-      <p><span class="ann-label">Summary:</span> Pre-experience disclaimer and PrEP primer. Discloses what data will be collected (zip, awareness of PrEP, phone number, name, Instagram) and why. Provides a baseline PrEP definition, efficacy statement, and STI disclaimer so users have the minimum medical context required to proceed. Acts as the user's opt-in consent point before any data entry.</p>
-      <p><span class="ann-label">User Action:</span> Reads the disclaimer and taps "got it" to proceed, or declines by closing the screen.</p>
+      <p><span class="ann-label">Summary:</span> Pre-experience disclaimer and PrEP primer. Discloses data collected (zip, awareness of PrEP, phone, name, Instagram), shows a baseline PrEP definition + efficacy statement + STI disclaimer. Acts as the opt-in consent point before any data entry.</p>
+      <p><span class="ann-label">User Action:</span> Reads disclaimer; taps "got it" to proceed.</p>
     </div>
 
     <div class="ann-section">
       <h4>Legal &amp; Compliance Language</h4>
-      <p><span class="ann-label">Why this language is here:</span> This screen is the only place in the experience where full ISI-style PrEP language appears. It uses the FDA-aligned PrEP description ("pre-exposure prophylaxis"), a regulatorily-framed efficacy statement ("about 99% effective in preventing HIV through sex" — matched to Gilead-approved brand language), the required STI non-protection disclaimer, and a redirect to a healthcare provider for medical questions. This keeps downstream screens non-clinical: because the disclaimer has already been shown, later screens can use awareness/access language rather than clinical claims.</p>
+      <p><span class="ann-label">Why this language is here:</span> Only place in the experience where full ISI-style PrEP language appears. Uses FDA-aligned description, Gilead-approved efficacy statement, required STI non-protection disclaimer, and a healthcare-provider redirect. This keeps downstream screens non-clinical.</p>
       <p><span class="ann-label">Key phrasing decisions:</span></p>
       <ul>
-        <li>"awareness of PrEP" — not "PrEP status" — avoids patient self-identification risk before the PrEP Question screen</li>
-        <li>"about 99% effective in preventing HIV through sex" — regulatorily approved efficacy statement; "about" and "through sex" are load-bearing qualifiers</li>
+        <li>"awareness of PrEP" — not "PrEP status" — avoids patient self-identification</li>
+        <li>"about 99% effective in preventing HIV through sex" — Gilead-approved efficacy; "about" and "through sex" are load-bearing</li>
         <li>"PrEP doesn't protect against other STIs" — required safety language</li>
-        <li>"talk to your healthcare provider" — redirects medical questions off-platform, preserves non-clinical positioning of the rest of the experience</li>
-        <li>"if you don't want to share or join the feed, you don't have to" — explicit opt-out language preserves user autonomy</li>
+        <li>"talk to your healthcare provider" — redirects medical questions off-platform</li>
+        <li>"if you don't want to share or join the feed, you don't have to" — explicit opt-out</li>
       </ul>
-      <p><span class="ann-label">Concerns this addresses:</span></p>
-      <ul>
-        <li>FDA PrEP efficacy claim requirements</li>
-        <li>Required STI non-protection disclosure</li>
-        <li>Informed consent for data collection (zip, phone, name, Instagram)</li>
-        <li>Non-medical positioning of the downstream community experience</li>
-      </ul>
-      <p><span class="ann-label">Legal basis:</span> FDA ISI requirements for PrEP-adjacent communications; Gilead brand compliance language; state HIV confidentiality statutes; TCPA (phone number collection requires prior express consent, satisfied by the explicit opt-in acknowledged with "got it").</p>
+      <p><span class="ann-label">Concerns:</span> FDA efficacy claim requirements; STI disclosure; informed consent for data collection; non-medical positioning of downstream experience.</p>
+      <p><span class="ann-label">Legal basis:</span> FDA ISI requirements; Gilead brand compliance; state HIV confidentiality statutes; TCPA (phone collection requires prior express consent, satisfied by "got it").</p>
     </div>
 
     <div class="ann-section">
@@ -2521,12 +2515,12 @@ next</div>
     let tries = 0;
     const setSize = (s) => {
       ann.style.fontSize = s + 'pt';
-      const lh = Math.max(1.2, 1.45 - (12 - s) * 0.02);
+      const lh = Math.max(1.15, 1.45 - (12 - s) * 0.02);
       ann.style.lineHeight = lh;
     };
     setSize(size);
-    // Shrink until fits, floor 9pt (spec: keep annotations large and readable)
-    while (ann.scrollHeight > ann.clientHeight + 1 && size > 9 && tries < 40) {
+    // Shrink until fits — prefer ≥9pt; absolute floor 6pt for the densest slides
+    while (ann.scrollHeight > ann.clientHeight + 1 && size > 6 && tries < 80) {
       size -= 0.25;
       setSize(size);
       tries++;

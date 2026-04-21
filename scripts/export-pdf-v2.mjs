@@ -32,12 +32,95 @@ const total = await page.evaluate(() => document.querySelectorAll('.slide').leng
 console.log(`Total slides: ${total}`);
 
 // Reveal every slide so fitAll/auditOverflow can measure real heights.
-await page.addStyleTag({ content: `
-  .slide { display: block !important; position: relative !important; }
-  .slide.slide-cover { display: flex !important; }
-  .slide[style*="display:flex"], .slide[style*="display: flex"] { display: flex !important; }
-  .slide-nav { display: none !important; }
-` });
+// Inject high-specificity overrides at end of <body> so they beat the existing
+// in-body <style> block. Use html.pdf-export prefix for higher specificity.
+await page.evaluate(() => {
+  document.documentElement.classList.add('pdf-export');
+  document.querySelectorAll('.slide').forEach(s => s.classList.add('active'));
+  const style = document.createElement('style');
+  style.id = 'pdf-export-overrides';
+  style.textContent = `
+    html.pdf-export, html.pdf-export body { background: #fff !important; overflow: visible !important; height: auto !important; }
+    html.pdf-export .slide-nav { display: none !important; }
+    html.pdf-export .slide {
+      display: block !important;
+      position: relative !important;
+      box-sizing: border-box !important;
+      width: 11in !important;
+      height: 8.5in !important;
+      overflow: hidden !important;
+      page-break-after: always !important;
+      break-after: page !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+      box-shadow: none !important;
+      margin: 0 !important;
+    }
+    html.pdf-export .slide:last-child { page-break-after: auto !important; break-after: auto !important; }
+    html.pdf-export .slide.slide-cover {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    html.pdf-export .slide.slide-frame {
+      display: grid !important;
+      grid-template-columns: 30% 1fr !important;
+      grid-template-rows: auto minmax(0, 1fr) !important;
+      grid-template-areas: "header header" "screenshot annotations" !important;
+      padding: 0.3in 0.5in 0.45in 0.5in !important;
+      gap: 0.12in 0.35in !important;
+      background: #EFE4CE !important;
+    }
+    html.pdf-export .slide.slide-frame .frame-header { grid-area: header !important; }
+    html.pdf-export .slide.slide-frame .frame-screenshot {
+      grid-area: screenshot !important;
+      min-height: 0 !important;
+      min-width: 0 !important;
+      overflow: hidden !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      justify-content: center !important;
+    }
+    html.pdf-export .slide.slide-frame .frame-screenshot img {
+      max-width: 100% !important;
+      max-height: 100% !important;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain !important;
+    }
+    html.pdf-export .slide.slide-frame .frame-annotations {
+      grid-area: annotations !important;
+      min-height: 0 !important;
+      overflow: hidden !important;
+    }
+    /* Force annotation children to inherit the auto-fit font-size set on .frame-annotations */
+    html.pdf-export .slide.slide-frame .frame-annotations p,
+    html.pdf-export .slide.slide-frame .frame-annotations li,
+    html.pdf-export .slide.slide-frame .frame-annotations .copy-verbatim,
+    html.pdf-export .slide.slide-frame .frame-annotations .data-callout,
+    html.pdf-export .slide.slide-frame .frame-annotations .callout-box,
+    html.pdf-export .slide.slide-frame .frame-annotations .reviewer-note,
+    html.pdf-export .slide.slide-frame .frame-annotations .reviewer-note p,
+    html.pdf-export .slide.slide-frame .frame-annotations .part-number-label,
+    html.pdf-export .slide.slide-frame .frame-annotations .part-number-field { font-size: inherit !important; }
+    html.pdf-export .slide.slide-frame .frame-annotations h4 { font-size: 0.92em !important; }
+    /* US-UNBC-4189 stamp must always sit at the bottom edge */
+    html.pdf-export .slide .slide-footer-stamp {
+      position: absolute !important;
+      bottom: 0.18in !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      text-align: center !important;
+      z-index: 10 !important;
+    }
+    /* Image-only slides keep flex centering */
+    html.pdf-export .slide[style*="display:flex"],
+    html.pdf-export .slide[style*="display: flex"] { display: flex !important; }
+  `;
+  document.body.appendChild(style);
+});
 
 await page.waitForTimeout(400);
 
