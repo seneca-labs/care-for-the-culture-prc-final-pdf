@@ -238,9 +238,9 @@
       color: #3D2B1F;
     }
 
-    /* Annotation Sections */
+    /* Annotation Sections — v3 tightened spacing for content density */
     .ann-section {
-      margin-bottom: 0.18in;
+      margin-bottom: 0.12in;        /* was 0.18in (~33% tighter) */
     }
     .ann-section h4 {
       font-size: 9pt;
@@ -257,18 +257,22 @@
       border-bottom-color: rgba(90,122,16,0.3);
     }
     .ann-section p {
-      margin-bottom: 5px;
+      margin-bottom: 4px;            /* was 5px */
       font-size: 10pt;
-      line-height: 1.5;
+      line-height: 1.4;              /* was 1.5 */
     }
     .ann-section ul {
       padding-left: 1.2em;
-      margin-bottom: 5px;
+      margin-bottom: 4px;            /* was 5px */
+      margin-top: 2px;
     }
     .ann-section li {
-      margin-bottom: 3px;
+      margin-bottom: 2px;            /* was 3px (~33% tighter) */
       font-size: 10pt;
+      line-height: 1.35;
     }
+    /* Tighter copy-verbatim line spacing — collapse the intra-block blank lines */
+    .copy-verbatim { line-height: 1.32 !important; }
     .ann-label {
       font-weight: 700;
       color: #3D2B1F;
@@ -416,13 +420,13 @@
       text-align: center;
       font-size: 8pt;
       letter-spacing: 0.08em;
-      color: #8B7355;
-      font-weight: 500;
+      color: #000;
+      font-weight: 700;
       font-family: monospace;
       pointer-events: none;
       z-index: 2;
     }
-    .slide-cover .slide-footer-stamp { color: #BFB49A; }
+    .slide-cover .slide-footer-stamp { color: #BFB49A; font-weight: 500; }
     .slide-topbar {
       position: absolute;
       top: 0.22in;
@@ -465,7 +469,7 @@
 <!-- ============================================================ -->
 <!-- KIOSK DESIGN                                                  -->
 <!-- ============================================================ -->
-<div class="slide" style="background:#EFE4CE;display:flex;align-items:center;justify-content:center;padding:0;position:relative;">
+<div class="slide" data-no-stamp="true" style="background:#EFE4CE;display:flex;align-items:center;justify-content:center;padding:0;position:relative;">
   <img src="output/screenshots/frame-kiosk-design.png" alt="Kiosk Design" style="width:100%;height:100%;object-fit:contain;">
   <div class="reviewer-note reviewer-note-overlay">
     <h4>Note to Reviewer</h4>
@@ -476,7 +480,7 @@
 <!-- ============================================================ -->
 <!-- KIOSK STICKERS                                                -->
 <!-- ============================================================ -->
-<div class="slide" style="background:#EFE4CE;display:flex;align-items:center;justify-content:center;padding:0;position:relative;">
+<div class="slide" data-no-stamp="true" style="background:#EFE4CE;display:flex;align-items:center;justify-content:center;padding:0;position:relative;">
   <img src="output/screenshots/frame-kiosk-stickers.png" alt="Kiosk Stickers" style="width:100%;height:100%;object-fit:contain;">
   <div class="reviewer-note reviewer-note-overlay">
     <h4>Note to Reviewer</h4>
@@ -494,14 +498,14 @@
     <span class="frame-id">full-kiosk</span>
   </div>
   <div class="frame-screenshot">
-    <a href="https://raw.githubusercontent.com/seneca-labs/care-for-the-culture-prc-final-pdf/main/output/screenshots/frame-kiosk-experience.gif" target="_blank" rel="noopener" style="display:block;width:100%;height:100%;">
+    <a href="https://seneca-labs.github.io/care-for-the-culture-prc-final-pdf/kiosk-walkthrough.html" target="_blank" rel="noopener" style="display:block;width:100%;height:100%;">
       <img src="output/screenshots/frame-kiosk-experience.gif" alt="Full kiosk experience walkthrough" style="width:100%;height:100%;object-fit:contain;">
     </a>
   </div>
   <div class="frame-annotations">
     <div class="ann-section reviewer-note">
       <h4>Note to Reviewer</h4>
-      <p style="margin:0;">If the animated GIF does not play in the PDF viewer, <a href="https://raw.githubusercontent.com/seneca-labs/care-for-the-culture-prc-final-pdf/main/output/screenshots/frame-kiosk-experience.gif" target="_blank" rel="noopener">click here to view the full kiosk walkthrough on GitHub</a>.</p>
+      <p style="margin:0;">If the animated GIF does not play in the PDF viewer, <a href="https://seneca-labs.github.io/care-for-the-culture-prc-final-pdf/kiosk-walkthrough.html" target="_blank" rel="noopener">click here to view</a>.</p>
     </div>
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
@@ -526,14 +530,14 @@
     <span class="frame-id">full-phone</span>
   </div>
   <div class="frame-screenshot">
-    <a href="https://raw.githubusercontent.com/seneca-labs/care-for-the-culture-prc-final-pdf/main/output/screenshots/frame-phone-experience.gif" target="_blank" rel="noopener" style="display:block;width:100%;height:100%;">
+    <a href="https://seneca-labs.github.io/care-for-the-culture-prc-final-pdf/phone-walkthrough.html" target="_blank" rel="noopener" style="display:block;width:100%;height:100%;">
       <img src="output/screenshots/frame-phone-experience.gif" alt="Full phone experience walkthrough" style="width:100%;height:100%;object-fit:contain;">
     </a>
   </div>
   <div class="frame-annotations">
     <div class="ann-section reviewer-note">
       <h4>Note to Reviewer</h4>
-      <p style="margin:0;">If the animated GIF does not play in the PDF viewer, <a href="https://raw.githubusercontent.com/seneca-labs/care-for-the-culture-prc-final-pdf/main/output/screenshots/frame-phone-experience.gif" target="_blank" rel="noopener">click here to view the full phone walkthrough on GitHub</a>.</p>
+      <p style="margin:0;">If the animated GIF does not play in the PDF viewer, <a href="https://seneca-labs.github.io/care-for-the-culture-prc-final-pdf/phone-walkthrough.html" target="_blank" rel="noopener">click here to view</a>.</p>
     </div>
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
@@ -749,13 +753,13 @@ ready to turn up</div>
   <div class="frame-annotations">
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
-      <p><span class="ann-label">Summary:</span> Public data view in The Feed app. User toggles between country, state, city, or county via search/chips. Same proportional dot pattern as kiosk data moments. Three states shown: US (default), NYC (drill-down), Search.</p>
-      <p><span class="ann-label">User Action:</span> Toggles map icon, searches or taps a city chip, reads the coverage/prevalence card.</p>
+      <p><span class="ann-label">Summary:</span> Public data view in The Feed app. Toggles between country, state, city, or county scope via search/chips. Uses same proportional dot pattern as kiosk data moments.</p>
+      <p><span class="ann-label">User Action:</span> Toggles map icon, taps a city chip, reads the coverage/prevalence card.</p>
     </div>
 
     <div class="ann-section">
       <h4>Legal &amp; Compliance Language</h4>
-      <p><span class="ann-label">Why this language is here:</span> All figures trace to AIDSVu 2023, displayed as published — no modeling. Numbers per 100,000 population. "Proportional representation · not geographic" disclaimer on every dot map. Labels use approved non-clinical phrasing.</p>
+      <p><span class="ann-label">Why this language is here:</span> All figures trace to AIDSVu 2023, displayed as published — no modeling. Numbers per 100,000 population.</p>
       <p><span class="ann-label">Concerns this addresses:</span></p>
       <ul>
         <li>No clinical claims — observational published rates only</li>
@@ -890,13 +894,13 @@ terms of use · privacy policy</div>
 </div>
 
 <!-- ============================================================ -->
-<!-- PREP DISCLAIMER                                               -->
+<!-- PREP DISCLAIMER (1 of 2)                                      -->
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
     <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
-    <h3>PrEP Disclaimer</h3>
-    <span class="frame-id">frame-prep-disclaimer</span>
+    <h3>PrEP Disclaimer (1 of 2)</h3>
+    <span class="frame-id">frame-prep-disclaimer-1</span>
   </div>
   <div class="frame-screenshot">
     <img src="output/screenshots/frame-prep-disclaimer.png" alt="PrEP Disclaimer with ISI language">
@@ -935,9 +939,28 @@ to onboard, we'll also ask for your zip and awareness of PrEP so we can show you
 
 lastly, we request your phone number, name, and instagram to enhance your experience using the feed and send you a follow up text about PrEP.
 
-if you don't want to share or join the feed, you don't have to.
+if you don't want to share or join the feed, you don't have to.</div>
+      <p style="margin-top:6px;font-style:italic;color:#8B5A2B;">Copy continues on next slide →</p>
+    </div>
+  </div>
+</div>
 
-* about PrEP
+<!-- ============================================================ -->
+<!-- PREP DISCLAIMER (2 of 2)                                      -->
+<!-- ============================================================ -->
+<div class="slide slide-frame">
+  <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
+    <h3>PrEP Disclaimer (2 of 2)</h3>
+    <span class="frame-id">frame-prep-disclaimer-2</span>
+  </div>
+  <div class="frame-screenshot">
+    <img src="output/screenshots/frame-prep-disclaimer.png" alt="PrEP Disclaimer — bottom 'about PrEP' region">
+  </div>
+  <div class="frame-annotations">
+    <div class="ann-section">
+      <h4 class="green">Copy on Frame (continued from previous slide)</h4>
+      <div class="copy-verbatim">* about PrEP
 
 PrEP stands for pre-exposure prophylaxis. that means routinely taking medicine before you're exposed to HIV to help reduce your chances of getting it. when taken as directed, PrEP can be about 99% effective in preventing HIV through sex.
 
@@ -1035,7 +1058,7 @@ retake</div>
         <li>No geolocation or GPS used</li>
         <li>Data used only for session-scoped content personalization</li>
       </ul>
-      <p><span class="ann-label">Legal basis:</span> General data minimization principles. HIPAA not triggered (Gilead not a covered entity for this event per Gilead Legal assessment, 4/14).</p>
+      <p><span class="ann-label">Legal basis:</span> General data minimization principles. HIPAA not triggered (Gilead not a covered entity for this event per Gilead Legal assessment).</p>
     </div>
 
     <div class="ann-section">
@@ -1077,8 +1100,8 @@ skip</div>
       <p><span class="ann-label">Why this language is here:</span> Two-pathway question structure collapses an earlier four-option design to de-identify users as patients. Phrasing includes "know someone who is" so selecting the option does not imply the user personally is on PrEP. Skip option preserves user autonomy without penalty.</p>
       <p><span class="ann-label">Stakeholder guidance that shaped this:</span></p>
       <ul>
-        <li>Gilead Compliance (4/14 call): Flagged that the original four-option PrEP question with "I'm on it" created patient self-identification risk under HIV confidentiality statutes and recommended collapsing to ambiguous phrasing that does not identify the user as a patient.</li>
-        <li>Agency partner (4/14 recap email): Directed simplification to two pathways with flexibility on final wording.</li>
+        <li>Gilead Compliance guidance: Flagged that the original four-option PrEP question with "I'm on it" created patient self-identification risk under HIV confidentiality statutes and recommended collapsing to ambiguous phrasing that does not identify the user as a patient.</li>
+        <li>Agency partner guidance: Directed simplification to two pathways with flexibility on final wording.</li>
       </ul>
       <p><span class="ann-label">Concerns this addresses:</span></p>
       <ul>
@@ -1086,7 +1109,7 @@ skip</div>
         <li>Patient status self-identification risk</li>
         <li>User autonomy via skip option</li>
       </ul>
-      <p><span class="ann-label">Legal basis:</span> State HIV confidentiality statutes (jurisdiction-dependent). HIPAA not triggered per Gilead Legal assessment (4/14) — Gilead not a covered entity for this event. TCPA not applicable to this screen.</p>
+      <p><span class="ann-label">Legal basis:</span> State HIV confidentiality statutes (jurisdiction-dependent). HIPAA not triggered per Gilead Legal assessment — Gilead not a covered entity for this event. TCPA not applicable to this screen.</p>
     </div>
 
     <div class="ann-section">
@@ -1613,8 +1636,8 @@ aidsvu 2023</div>
   <div class="frame-annotations">
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
-      <p><span class="ann-label">Summary:</span> Displays PrEP coverage and HIV prevalence for Manhattan (New York County) on the same state map dot visualization as the connected variant. The new/skipped variant uses introductory, non-presumptive narrative language appropriate for users who are new to PrEP or who skipped the PrEP question.</p>
-      <p><span class="ann-label">User Action:</span> Views the city data card. Swipes to next city or taps "see your impact" to advance. "Previous" returns to the prior city.</p>
+      <p><span class="ann-label">Summary:</span> Displays Manhattan (New York County) PrEP/HIV data on the state map. New/skipped variant uses introductory, non-presumptive narrative for users new to PrEP or who skipped the question.</p>
+      <p><span class="ann-label">User Action:</span> Views the city data card. Swipes to next city or taps "see your impact". "Previous" returns to prior city.</p>
     </div>
 
     <div class="ann-section">
@@ -2009,7 +2032,7 @@ aidsvu · 2023 · [neighborhood]
     <h3>Impact Card 5: Spread Awareness</h3>
     <span class="frame-id">frame-11-card-5</span>
   </div>
-  <div class="frame-screenshot" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;height:100%;justify-items:center;align-items:center;">
+  <div class="frame-screenshot" style="display:grid;grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;height:100%;width:100%;justify-items:center;align-items:center;overflow:hidden;">
     <img src="output/screenshots/frame-11-card-5-1.png" alt="Spread Awareness (start)" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;">
     <img src="output/screenshots/frame-11-card-5-2.png" alt="Spread Awareness (complete)" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;">
   </div>
@@ -2111,27 +2134,22 @@ skip</div>
   <div class="frame-annotations">
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
-      <p><span class="ann-label">Summary:</span> Collects the user's social/mood preferences (multi-select) to personalize their feed display and enable vibe-based filtering. This is the input that drives the Filter View, Profile View, and sort order of the Feed. It runs AFTER the data experience, not before — so it cannot color the health framing.</p>
-      <p><span class="ann-label">User Action:</span> Picks one or more vibes and taps "pick at least one" to continue, or taps "skip" to continue without setting a vibe.</p>
+      <p><span class="ann-label">Summary:</span> Collects social/mood preferences (multi-select) to personalize the Feed and enable vibe-based filtering. Runs AFTER the data experience so it cannot color health framing.</p>
+      <p><span class="ann-label">User Action:</span> Picks one or more vibes; taps "pick at least one" or "skip".</p>
     </div>
 
     <div class="ann-section">
       <h4>Legal &amp; Compliance Language</h4>
-      <p><span class="ann-label">Why this language is here:</span> All four vibe options are social mood descriptors with no health, risk, or clinical overtones. "open to flirt / open to a little chemistry" describes social chemistry, not sexual behavior or risk profile. Vibes are used ONLY for feed filtering and never combined with the user's PrEP answer, zip, or any health-related data on display. Placement AFTER the data moments also means the vibe selection does not prime or shape the user's interpretation of the health data.</p>
+      <p><span class="ann-label">Why this language is here:</span> All four vibe options are social mood descriptors with no health, risk, or clinical overtones. Vibes are used ONLY for feed filtering and never combined with PrEP answer, zip, or any health-related data.</p>
       <p><span class="ann-label">Key phrasing decisions:</span></p>
       <ul>
-        <li>Each vibe has a warm tagline ("the floor is calling", "the night starts when you arrive") that's social, not clinical</li>
+        <li>Each vibe has a warm social tagline — not clinical</li>
         <li>No option implies sexual activity, PrEP use, or HIV status</li>
-        <li>Skip link preserves user autonomy — vibe is optional</li>
-        <li>Vibes collected here are not transmitted to Gilead or stored beyond the session required to drive the feed</li>
+        <li>Skip link preserves user autonomy</li>
+        <li>Vibes not transmitted to Gilead or stored beyond the session</li>
       </ul>
-      <p><span class="ann-label">Concerns this addresses:</span></p>
-      <ul>
-        <li>Prior language review concern that "vibe selection" might pull focus from health education — addressed by placement AFTER all data moments</li>
-        <li>No health-based matching on the social surface (enforced by filter options available on the Filter View screen)</li>
-        <li>Skip option preserves autonomy</li>
-      </ul>
-      <p><span class="ann-label">Legal basis:</span> Social preferences are not protected health information. No clinical claims. No linkage to PrEP answer.</p>
+      <p><span class="ann-label">Concerns:</span> placement AFTER data moments ensures vibe selection does not pull focus from health education; no health-based matching on social surface; skip preserves autonomy.</p>
+      <p><span class="ann-label">Legal basis:</span> Social preferences are not PHI. No clinical claims. No linkage to PrEP answer.</p>
     </div>
 
     <div class="ann-section">
@@ -2238,7 +2256,7 @@ tonight's feed is shared with the room. it disappears by morning.</div>
         <li>CTA directs users to learn about HIV prevention and testing resources — no claims about efficacy or product</li>
         <li>"Testing" reference is a community-health resource pointer, not a recommendation or diagnosis</li>
       </ul>
-      <p><span class="ann-label">Legal basis:</span> HIV confidentiality statutes (jurisdiction-dependent). Photo tinting based on PrEP answer was removed per Gilead legal review (4/14 call) to prevent any visual linkage between the user's photo and their health-related response. Card content reviewed for awareness-only framing.</p>
+      <p><span class="ann-label">Legal basis:</span> HIV confidentiality statutes (jurisdiction-dependent). Card content reviewed for awareness-only framing.</p>
     </div>
 
     <div class="ann-section">
@@ -2278,7 +2296,7 @@ Learn more about why HIV Prevention is important to your community and where to 
       <p><span class="ann-label">Why this language is here:</span> TCPA (Telephone Consumer Protection Act) requires clear disclosure and consent before sending text messages. The on-screen language includes: message frequency varies, message and data rates may apply, reply STOP to opt out. This language is displayed before the user submits their number.</p>
       <p><span class="ann-label">Stakeholder guidance that shaped this:</span></p>
       <ul>
-        <li>Gilead Legal (4/14 call): Confirmed TCPA compliance language requirements for SMS opt-in at kiosk point of collection.</li>
+        <li>Gilead Legal guidance confirmed TCPA compliance language requirements for SMS opt-in at kiosk point of collection.</li>
       </ul>
       <p><span class="ann-label">Concerns this addresses:</span></p>
       <ul>
@@ -2519,8 +2537,8 @@ next</div>
       ann.style.lineHeight = lh;
     };
     setSize(size);
-    // Shrink until fits — prefer ≥9pt; absolute floor 6pt for the densest slides
-    while (ann.scrollHeight > ann.clientHeight + 1 && size > 6 && tries < 80) {
+    // Shrink until fits — prefer ≥9pt; absolute floor 5pt for the densest slides
+    while (ann.scrollHeight > ann.clientHeight + 1 && size > 5 && tries < 100) {
       size -= 0.25;
       setSize(size);
       tries++;
@@ -2547,8 +2565,8 @@ next</div>
   const BOTTOM_STAMP = 'US-UNBC-4189';
   (function stampAllSlides() {
     slides.forEach((slide, idx) => {
-      // Bottom-center stamp (every slide including cover)
-      if (!slide.querySelector('.slide-footer-stamp')) {
+      // Bottom-center stamp (every slide except those marked data-no-stamp)
+      if (slide.dataset.noStamp !== 'true' && !slide.querySelector('.slide-footer-stamp')) {
         const f = document.createElement('div');
         f.className = 'slide-footer-stamp';
         f.textContent = BOTTOM_STAMP;

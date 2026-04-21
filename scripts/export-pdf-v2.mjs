@@ -18,7 +18,9 @@ const PDF_HEIGHT = '8.5in';
 
 const browser = await chromium.launch();
 const ctx = await browser.newContext({
-  viewport: { width: 1440, height: 810 },
+  // Viewport sized to the PDF page (11in x 8.5in @ 96dpi) so the audit
+  // measures the same pixel layout the PDF renderer will produce.
+  viewport: { width: 1056, height: 816 },
   deviceScaleFactor: 2,
 });
 const page = await ctx.newPage();
@@ -124,28 +126,60 @@ await page.evaluate(() => {
 
 await page.waitForTimeout(400);
 
+// Switch to print media BEFORE measuring so audit sees the same layout the PDF will use.
+await page.emulateMedia({ media: 'print' });
+await page.waitForTimeout(400);
+
 // Run fit + audit.
 const report = await page.evaluate(() => {
   if (typeof window.fitAll === 'function') window.fitAll();
-  if (typeof window.auditOverflow === 'function') return window.auditOverflow();
-  return [];
+  // Stronger audit: also look at last child's bottom edge vs container.
+  return Array.from(document.querySelectorAll('.slide')).map((s, i) => {
+    const ann = s.querySelector('.frame-annotations');
+    let annOverflow = false;
+    let lastChildClipped = false;
+    let lastChildText = '';
+    if (ann) {
+      annOverflow = ann.scrollHeight > ann.clientHeight + 1;
+      const annRect = ann.getBoundingClientRect();
+      const last = ann.lastElementChild;
+      if (last) {
+        const lr = last.getBoundingClientRect();
+        // If the last block's bottom edge falls outside ann's box, content is clipped
+        lastChildClipped = lr.bottom > annRect.bottom + 1;
+        // Drill into last copy-verbatim to see its visible bottom text
+        const cv = last.querySelector('.copy-verbatim') || (last.classList && last.classList.contains('copy-verbatim') ? last : null);
+        if (cv) {
+          const txt = (cv.textContent || '').trim().split('\n').filter(Boolean);
+          lastChildText = txt[txt.length - 1] || '';
+        }
+      }
+    }
+    const slideOverflow = s.scrollHeight > s.clientHeight + 1 || s.scrollWidth > s.clientWidth + 1;
+    // Also check screenshot horizontal overflow
+    const shot = s.querySelector('.frame-screenshot');
+    let shotOverflow = false;
+    if (shot) {
+      shotOverflow = shot.scrollWidth > shot.clientWidth + 1;
+    }
+    const h3 = s.querySelector('h3, h1');
+    return { index: i + 1, title: h3 ? h3.textContent.trim().slice(0, 50) : '?', annOverflow, lastChildClipped, slideOverflow, shotOverflow, lastChildText };
+  });
 });
 
-const overflowing = report.filter(r => r.annOverflow || r.slideOverflow);
-if (overflowing.length > 0) {
+const failed = report.filter(r => r.annOverflow || r.slideOverflow || r.shotOverflow || r.lastChildClipped);
+if (failed.length > 0) {
   console.error('\n❌ OVERFLOW DETECTED on these slides:');
-  for (const r of overflowing) {
-    console.error(`  slide #${r.index}  annOverflow=${r.annOverflow}  slideOverflow=${r.slideOverflow}  scrollH=${r.scrollH}  clientH=${r.clientH}`);
+  for (const r of failed) {
+    console.error(`  slide #${r.index} (${r.title})  ann=${r.annOverflow} lastClipped=${r.lastChildClipped} slide=${r.slideOverflow} shotW=${r.shotOverflow}  last="${r.lastChildText}"`);
   }
-  console.error(`\nFail: ${overflowing.length} slide(s) overflow. Tighten copy or shrink media before export.`);
+  console.error(`\nFail: ${failed.length} slide(s) overflow.`);
   await browser.close();
   process.exit(1);
 }
-console.log(`✅ Overflow audit passed (${total} slides).`);
+console.log(`✅ Overflow audit passed (${total} slides) in print mode.`);
 
-// Emit PDF using print media so @media print rules + @page apply.
-await page.emulateMedia({ media: 'print' });
-await page.waitForTimeout(500);
+await page.waitForTimeout(300);
 
 await page.pdf({
   path: OUT_PDF,
