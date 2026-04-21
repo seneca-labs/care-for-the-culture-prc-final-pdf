@@ -154,10 +154,20 @@
     .frame-header {
       grid-area: header;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
+      align-items: stretch;
       border-bottom: 3px solid #3D2B1F;
       padding-bottom: 4px;
+      position: relative;
+    }
+    .frame-header .part-number-row {
+      margin: 0 0 6px 0;
+      padding-right: 80px; /* leave room for frame-id in top-right */
+    }
+    .frame-header .frame-id {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
     .frame-header h3 {
       font-weight: 900;
@@ -381,6 +391,7 @@
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Feed Screen (Phone)</h3>
     <span class="frame-id">frame-feed-home</span>
   </div>
@@ -388,11 +399,6 @@
     <img src="output/screenshots/frame-feed-home.png" alt="Feed Screen — Phone view of tonight's photos">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Public feed view available on a guest's phone after opting in. Displays photos taken tonight with the subject's first name and vibe tags. Acts as a social discovery surface only — it carries no health-related content.</p>
@@ -429,6 +435,7 @@ kai
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Feed Screen Profile View (Phone)</h3>
     <span class="frame-id">frame-feed-profile</span>
   </div>
@@ -436,11 +443,6 @@ kai
     <img src="output/screenshots/frame-feed-profile.png" alt="Feed Screen Profile View showing a guest's vibe tags">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Expanded profile after tapping a feed photo. Displays the guest's vibe tags (social mood preferences selected earlier on the Vibe Check screen) and a single "send a compliment" action. No bio, no health info, no free-text field.</p>
@@ -476,6 +478,7 @@ send a compliment</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Feed Screen Compliment View (Phone)</h3>
     <span class="frame-id">frame-feed-compliment</span>
   </div>
@@ -483,11 +486,6 @@ send a compliment</div>
     <img src="output/screenshots/frame-feed-compliment.png" alt="Feed Screen Compliment View with pre-written options">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Modal sheet for sending a compliment to another guest. The user selects one of four pre-written positive statements. There is no free-text input. The recipient sees the compliment as a notification; the sender is not revealed unless both parties have mutually exchanged contact details through the app.</p>
@@ -526,6 +524,7 @@ cancel</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Feed Screen Filter View (Phone)</h3>
     <span class="frame-id">frame-feed-filter</span>
   </div>
@@ -533,11 +532,6 @@ cancel</div>
     <img src="output/screenshots/frame-feed-filter.png" alt="Feed Screen Filter View showing vibe filters">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Filter sheet that lets a user narrow the feed by vibe. Default is "show everyone". Selecting a vibe shows only guests who chose that same vibe on the Vibe Check screen earlier in the kiosk flow.</p>
@@ -573,6 +567,7 @@ ready to turn up</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Home Screen Map Toggle (Phone)</h3>
     <span class="frame-id">frame-home-map</span>
   </div>
@@ -582,11 +577,6 @@ ready to turn up</div>
     <img src="output/screenshots/frame-home-map-3.png" alt="Home Map — Search view" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Always-available public data view inside The Feed app. The user can switch between country, state, city, or county scopes via search or pre-set chips. The visualization uses the same proportional dot pattern as the onboarding data moments so the language and visual grammar stay consistent. Three states shown: United States (default), New York City (drill-down), and Search (typing a location).</p>
@@ -649,6 +639,7 @@ kings county</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Home Screen Kiosk</h3>
     <span class="frame-id">frame-1</span>
   </div>
@@ -656,11 +647,6 @@ kings county</div>
     <img src="output/screenshots/frame-1.png" alt="Home screen">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> The home screen serves as the attract loop for the kiosk experience. It displays a scrolling feed of existing participant cards and a California map visualization with county-level HIV/PrEP data. The screen runs continuously between user sessions.</p>
@@ -683,6 +669,7 @@ everything you share tonight is deleted within 24 hours.</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Onboarding</h3>
     <span class="frame-id">frame-2</span>
   </div>
@@ -690,11 +677,6 @@ everything you share tonight is deleted within 24 hours.</div>
     <img src="output/screenshots/frame-2.png" alt="Onboarding screen">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Introduces the kiosk experience and sets expectations for the interactive journey ahead. Presents Terms of Use and Privacy Policy links before the user proceeds, ensuring informed consent is established at the outset.</p>
@@ -742,6 +724,7 @@ terms of use · privacy policy</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>PrEP Disclaimer</h3>
     <span class="frame-id">frame-prep-disclaimer</span>
   </div>
@@ -749,11 +732,6 @@ terms of use · privacy policy</div>
     <img src="output/screenshots/frame-prep-disclaimer.png" alt="PrEP Disclaimer with ISI language">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Pre-experience disclaimer and PrEP primer. Discloses what data will be collected (zip, awareness of PrEP, phone number, name, Instagram) and why. Provides a baseline PrEP definition, efficacy statement, and STI disclaimer so users have the minimum medical context required to proceed. Acts as the user's opt-in consent point before any data entry.</p>
@@ -813,6 +791,7 @@ got it</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Photo Capture</h3>
     <span class="frame-id">frame-3</span>
   </div>
@@ -820,11 +799,6 @@ got it</div>
     <img src="output/screenshots/frame-3.png" alt="Photo Capture screen">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Captures a photo of the user via the kiosk camera. The photo is used to generate a personalized identity card later in the experience. The photo is processed locally and is not transmitted to any external server.</p>
@@ -843,6 +817,7 @@ got it</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Photo Review</h3>
     <span class="frame-id">frame-4</span>
   </div>
@@ -850,11 +825,6 @@ got it</div>
     <img src="output/screenshots/frame-4.png" alt="Photo Review screen">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Allows the user to review their captured photo and either confirm or retake it. This gives the user agency over their image before it is incorporated into their identity card.</p>
@@ -876,6 +846,7 @@ retake</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Zip Code Entry</h3>
     <span class="frame-id">frame-5</span>
   </div>
@@ -883,11 +854,6 @@ retake</div>
     <img src="output/screenshots/frame-5.png" alt="Zip Code Entry screen">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Collects the user's zip code to determine which county-level HIV and PrEP data to display in subsequent data frames. The zip code is mapped to a county using a static lookup table (no geolocation services). The zip code is not stored after the session ends.</p>
@@ -928,6 +894,7 @@ skip</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>PrEP Question</h3>
     <span class="frame-id">frame-6</span>
   </div>
@@ -935,11 +902,6 @@ skip</div>
     <img src="output/screenshots/frame-6.png" alt="PrEP Question screen">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Asks the user about their relationship to PrEP using de-identified language to shape the narrative experience on subsequent frames. The question uses a two-pathway structure that does not require the user to disclose personal health status.</p>
@@ -982,6 +944,7 @@ skip</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Map Key</h3>
     <span class="frame-id">frame-map-key</span>
   </div>
@@ -989,11 +952,6 @@ skip</div>
     <img src="output/screenshots/frame-map-key.png" alt="Map Key — color legend for upcoming data frames">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Color legend shown before the national and city data frames begin. Establishes the three-color visual language (on PrEP / living with HIV / neither) and frames the upcoming visualizations as awareness data rather than clinical diagnosis or surveillance.</p>
@@ -1041,6 +999,7 @@ continue</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Data Intro (Color Key)</h3>
     <span class="frame-id">frame-7</span>
   </div>
@@ -1048,11 +1007,6 @@ continue</div>
     <img src="output/screenshots/frame-7.png" alt="Data Intro screen">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Introduces the data visualization section and explains the color coding used throughout the subsequent data frames. Prepares the user for the visual language they will encounter, establishing that dots represent relative rates rather than individual people.</p>
@@ -1080,6 +1034,7 @@ continue</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>National Timeline<span class="variant-badge badge-connected">Connected</span></h3>
     <span class="frame-id">frame-8-connected</span>
   </div>
@@ -1089,11 +1044,6 @@ continue</div>
     <img src="output/screenshots/frame-8-connected-3.png" alt="National Timeline - connected variant (end)" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Displays the growth of PrEP coverage nationally from 2012 to 2023 using an interactive timeline slider. The "connected" variant is shown to users who indicated a relationship to PrEP and uses affirming narrative language.</p>
@@ -1144,6 +1094,7 @@ aidsvu 2023 / see your community</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>National Timeline<span class="variant-badge badge-new">New / Skipped</span></h3>
     <span class="frame-id">frame-8-new</span>
   </div>
@@ -1153,11 +1104,6 @@ aidsvu 2023 / see your community</div>
     <img src="output/screenshots/frame-8-new-3.png" alt="National Timeline - new/skipped variant (end)" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Displays the same national HIV diagnosis timeline (2012 to 2023) as the connected variant, but uses introductory narrative language appropriate for users who are new to PrEP or who skipped the PrEP question.</p>
@@ -1210,6 +1156,7 @@ see your community</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>City: Brooklyn<span class="variant-badge badge-connected">Connected</span></h3>
     <span class="frame-id">frame-9-1</span>
   </div>
@@ -1217,11 +1164,6 @@ see your community</div>
     <img src="output/screenshots/frame-9-1.png" alt="Borough Brooklyn - connected variant">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Displays PrEP coverage and HIV prevalence for Brooklyn (Kings County) on the same state map dot visualization. The connected variant uses narrative language appropriate for users with an existing relationship to PrEP. Borough data contextualizes the national trend shown in the previous frame.</p>
@@ -1262,6 +1204,7 @@ aidsvu 2023 / see your impact</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>City: The Bronx<span class="variant-badge badge-connected">Connected</span></h3>
     <span class="frame-id">frame-9-2</span>
   </div>
@@ -1269,11 +1212,6 @@ aidsvu 2023 / see your impact</div>
     <img src="output/screenshots/frame-9-2.png" alt="Borough The Bronx - connected variant">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Displays PrEP coverage and HIV prevalence for The Bronx on the same state map dot visualization. The connected variant uses narrative language appropriate for users with an existing relationship to PrEP.</p>
@@ -1315,6 +1253,7 @@ aidsvu 2023</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>City: Manhattan<span class="variant-badge badge-connected">Connected</span></h3>
     <span class="frame-id">frame-9-3</span>
   </div>
@@ -1322,11 +1261,6 @@ aidsvu 2023</div>
     <img src="output/screenshots/frame-9-3.png" alt="Borough Manhattan - connected variant">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Displays PrEP coverage and HIV prevalence for Manhattan (New York County) with a state map dot visualization. The connected variant uses affirming narrative language for users with an existing relationship to PrEP.</p>
@@ -1368,6 +1302,7 @@ aidsvu 2023</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>City: Queens<span class="variant-badge badge-connected">Connected</span></h3>
     <span class="frame-id">frame-9-4</span>
   </div>
@@ -1375,11 +1310,6 @@ aidsvu 2023</div>
     <img src="output/screenshots/frame-9-4.png" alt="Borough Queens - connected variant">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Displays PrEP coverage and HIV prevalence for Queens (Queens County) with a state map dot visualization. The connected variant uses affirming narrative language for users with an existing relationship to PrEP.</p>
@@ -1421,6 +1351,7 @@ aidsvu 2023</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>City: Brooklyn<span class="variant-badge badge-new">New / Skipped</span></h3>
     <span class="frame-id">frame-9-new</span>
   </div>
@@ -1428,11 +1359,6 @@ aidsvu 2023</div>
     <img src="output/screenshots/frame-9-new.png" alt="Borough Brooklyn - new/skipped variant">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Displays PrEP coverage and HIV prevalence for Brooklyn (Kings County) on the same state map dot visualization. The new/skipped variant uses introductory, non-presumptive narrative language appropriate for users who are new to PrEP or who skipped the PrEP question.</p>
@@ -1469,6 +1395,7 @@ aidsvu 2023</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>City: The Bronx<span class="variant-badge badge-new">New / Skipped</span></h3>
     <span class="frame-id">frame-9-new-2</span>
   </div>
@@ -1476,11 +1403,6 @@ aidsvu 2023</div>
     <img src="output/screenshots/frame-9-new-2.png" alt="Borough The Bronx - new/skipped variant">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Displays PrEP coverage and HIV prevalence for The Bronx on the same state map dot visualization. The new/skipped variant uses introductory language appropriate for users who are new to PrEP or who skipped the PrEP question.</p>
@@ -1517,6 +1439,7 @@ aidsvu 2023</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>City: Manhattan<span class="variant-badge badge-new">New / Skipped</span></h3>
     <span class="frame-id">frame-9-new-3</span>
   </div>
@@ -1524,11 +1447,6 @@ aidsvu 2023</div>
     <img src="output/screenshots/frame-9-new-3.png" alt="City Manhattan - new/skipped variant">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Displays PrEP coverage and HIV prevalence for Manhattan (New York County) on the same state map dot visualization as the connected variant. The new/skipped variant uses introductory, non-presumptive narrative language appropriate for users who are new to PrEP or who skipped the PrEP question.</p>
@@ -1591,6 +1509,7 @@ previous</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>City: Queens<span class="variant-badge badge-new">New / Skipped</span></h3>
     <span class="frame-id">frame-9-new-4</span>
   </div>
@@ -1598,11 +1517,6 @@ previous</div>
     <img src="output/screenshots/frame-9-new-4.png" alt="City Queens - new/skipped variant">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Displays PrEP coverage and HIV prevalence for Queens (Queens County) on the same state map dot visualization as the connected variant. The new/skipped variant uses introductory, non-presumptive narrative language and acts as the final city card before the impact sequence begins.</p>
@@ -1665,6 +1579,7 @@ previous</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Impact Intro</h3>
     <span class="frame-id">frame-10</span>
   </div>
@@ -1672,11 +1587,6 @@ previous</div>
     <img src="output/screenshots/frame-10.png" alt="Impact Intro screen">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Transitions the user from the geographic data sequence (national and borough) into the identity card carousel. Sets context for the upcoming county-level data breakdown cards. Introduces the "unaware/aware" color key that will be used in the drag interaction. Prepares the user to explore their community's data across multiple dimensions (overall, race, age, gender).</p>
@@ -1716,6 +1626,7 @@ continue</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Impact Card 1: County Overall</h3>
     <span class="frame-id">frame-11-card-1</span>
   </div>
@@ -1723,11 +1634,6 @@ continue</div>
     <img src="output/screenshots/frame-11-card-1.png" alt="Identity Card - County Overall">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> First card in the five-card identity carousel. Displays the overall PrEP coverage and HIV prevalence rates for the user's county. A persistent drag map is rendered above the card showing the county shape with dots. The user's photo appears as a draggable element on the map. Progress indicator shows 1 of 5.</p>
@@ -1780,6 +1686,7 @@ aidsvu · 2023 · [neighborhood]
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Impact Card 2: Race</h3>
     <span class="frame-id">frame-11-card-2</span>
   </div>
@@ -1787,11 +1694,6 @@ aidsvu · 2023 · [neighborhood]
     <img src="output/screenshots/frame-11-card-2.png" alt="Identity Card - Race Diagnoses">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Second card in the five-card identity carousel. Displays new HIV diagnosis rates by race for the user's county (Kings County / Brooklyn), framing the awareness gap as a community-level observation. Uses "of every 100,000" format per language guidelines. Progress indicator shows 2 of 5.</p>
@@ -1836,6 +1738,7 @@ aidsvu · 2023 · [neighborhood]
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Impact Card 3: Age</h3>
     <span class="frame-id">frame-11-card-3</span>
   </div>
@@ -1843,11 +1746,6 @@ aidsvu · 2023 · [neighborhood]
     <img src="output/screenshots/frame-11-card-3.png" alt="Identity Card - Age PrEP Coverage">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Third card in the five-card identity carousel. Displays PrEP coverage rates by age group for the user's county (Kings County). Uses "of every 100,000" format per language guidelines. Progress indicator shows 3 of 5.</p>
@@ -1892,6 +1790,7 @@ aidsvu · 2023 · [neighborhood]
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Impact Card 4: Gender</h3>
     <span class="frame-id">frame-11-card-4</span>
   </div>
@@ -1899,11 +1798,6 @@ aidsvu · 2023 · [neighborhood]
     <img src="output/screenshots/frame-11-card-4.png" alt="Identity Card - Gender PrEP Coverage">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Fourth card in the five-card identity carousel. Displays PrEP coverage rates by gender for the user's county (Kings County). Uses "of every 100,000" format per language guidelines. Progress indicator shows 4 of 5.</p>
@@ -1947,6 +1841,7 @@ aidsvu · 2023 · [neighborhood]
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Impact Card 5: Spread Awareness</h3>
     <span class="frame-id">frame-11-card-5</span>
   </div>
@@ -1955,11 +1850,6 @@ aidsvu · 2023 · [neighborhood]
     <img src="output/screenshots/frame-11-card-5-2.png" alt="Spread Awareness (complete)" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Fifth and final card in the identity carousel. Interactive drag element allows the user to "spread awareness" by dragging their photo across the map, which triggers dot color transitions from white (unaware) to blue (aware) on the persistent map above. Progress indicator shows 5 of 5. The "get your photo" button becomes enabled after the user completes the drag interaction.</p>
@@ -2001,6 +1891,7 @@ get your photo</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Name &amp; Instagram Entry</h3>
     <span class="frame-id">frame-13</span>
   </div>
@@ -2008,11 +1899,6 @@ get your photo</div>
     <img src="output/screenshots/frame-13.png" alt="Name Entry screen">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Collects the user's name and optional Instagram handle to personalize their identity card. The name appears on the generated card and, if the user opts in, on the shared feed display. A compact card preview updates in real-time as the user types.</p>
@@ -2051,6 +1937,7 @@ skip</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Vibe Check</h3>
     <span class="frame-id">frame-vibe-check</span>
   </div>
@@ -2058,11 +1945,6 @@ skip</div>
     <img src="output/screenshots/frame-vibe-check.png" alt="Vibe Check — social mood selector for the feed">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Collects the user's social/mood preferences (multi-select) to personalize their feed display and enable vibe-based filtering. This is the input that drives the Filter View, Profile View, and sort order of the Feed. It runs AFTER the data experience, not before — so it cannot color the health framing.</p>
@@ -2121,6 +2003,7 @@ skip</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Feed Opt-In</h3>
     <span class="frame-id">frame-14</span>
   </div>
@@ -2128,11 +2011,6 @@ skip</div>
     <img src="output/screenshots/frame-14.png" alt="Feed Opt-In screen">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Asks the user whether they want their identity card to appear on the shared event feed, which is a projected display visible to other event attendees. The disclosure clearly states that the feed is shared with the room and disappears by morning. Both options (opt in, opt out) are visible with equal visual weight.</p>
@@ -2171,6 +2049,7 @@ tonight's feed is shared with the room. it disappears by morning.</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Photo Card (Physical Takeaway)</h3>
     <span class="frame-id">frame-card</span>
   </div>
@@ -2178,11 +2057,6 @@ tonight's feed is shared with the room. it disappears by morning.</div>
     <img src="output/screenshots/frame-card.png" alt="Photo Card takeaway">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Physical printed photo card given to every user as a takeaway from the kiosk experience. The card is printed after the feed opt-in screen and before the phone number screen, ensuring every user receives their card regardless of whether they provide a phone number or join the feed. The card is the core deliverable of the experience.</p>
@@ -2221,6 +2095,7 @@ Learn more about why HIV Prevention is important to your community and where to 
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Phone Number</h3>
     <span class="frame-id">frame-15</span>
   </div>
@@ -2228,11 +2103,6 @@ Learn more about why HIV Prevention is important to your community and where to 
     <img src="output/screenshots/frame-15.png" alt="Phone Number screen">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Collects the user's phone number to send them their personalized identity card via text message. The TCPA compliance language is visible on screen. The user can skip this step without providing a phone number.</p>
@@ -2279,6 +2149,7 @@ skip</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Done / QR</h3>
     <span class="frame-id">frame-16</span>
   </div>
@@ -2286,11 +2157,6 @@ skip</div>
     <img src="output/screenshots/frame-16.png" alt="Done / QR screen">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Final screen of the kiosk experience. Displays the user's card preview alongside a QR code for browsing the feed on a personal phone. The session concludes here and returns to the home screen attract loop after a 15-second timeout.</p>
@@ -2320,6 +2186,7 @@ next</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Full Kiosk Experience</h3>
     <span class="frame-id">full-kiosk</span>
   </div>
@@ -2327,11 +2194,6 @@ next</div>
     <img src="output/screenshots/frame-kiosk-experience.gif" alt="Full kiosk experience walkthrough">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Animated walkthrough of the full kiosk user flow end-to-end. Included here so reviewers can see how individual screens connect in sequence and how interactions, transitions, and data visualizations unfold in real time.</p>
@@ -2351,6 +2213,7 @@ next</div>
 <!-- ============================================================ -->
 <div class="slide slide-frame">
   <div class="frame-header">
+    <div class="part-number-row"><span class="part-number-label">Part Number:</span> <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span></div>
     <h3>Full Phone Experience</h3>
     <span class="frame-id">full-phone</span>
   </div>
@@ -2358,11 +2221,6 @@ next</div>
     <img src="output/screenshots/frame-phone-experience.gif" alt="Full phone experience walkthrough">
   </div>
   <div class="frame-annotations">
-    <div class="part-number-row">
-      <span class="part-number-label">Part Number:</span>
-      <span class="part-number-field">HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026  US-UNBC-4189</span>
-    </div>
-
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
       <p><span class="ann-label">Summary:</span> Animated walkthrough of the phone-based feed experience accessed after scanning the kiosk QR code. Demonstrates how users browse the feed, view profiles, send compliments, and filter content on their personal devices.</p>
