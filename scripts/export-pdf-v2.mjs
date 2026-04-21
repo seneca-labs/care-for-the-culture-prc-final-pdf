@@ -80,6 +80,9 @@ await page.evaluate(() => {
       min-height: 0 !important;
       min-width: 0 !important;
       overflow: hidden !important;
+    }
+    /* Only force flex centering on screenshots that are NOT explicitly using inline grid */
+    html.pdf-export .slide.slide-frame .frame-screenshot:not([style*="grid"]) {
       display: flex !important;
       align-items: flex-start !important;
       justify-content: center !important;

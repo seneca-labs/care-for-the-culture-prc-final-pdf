@@ -240,7 +240,7 @@
 
     /* Annotation Sections — v3 tightened spacing for content density */
     .ann-section {
-      margin-bottom: 0.12in;        /* was 0.18in (~33% tighter) */
+      margin-bottom: 0.08in;        /* tighter for densest slides */
     }
     .ann-section h4 {
       font-size: 9pt;
@@ -248,7 +248,7 @@
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: #B33A2B;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
       padding-bottom: 1px;
       border-bottom: 1px solid rgba(179,58,43,0.25);
     }
@@ -257,22 +257,22 @@
       border-bottom-color: rgba(90,122,16,0.3);
     }
     .ann-section p {
-      margin-bottom: 4px;            /* was 5px */
+      margin-bottom: 3px;
       font-size: 10pt;
-      line-height: 1.4;              /* was 1.5 */
+      line-height: 1.32;
     }
     .ann-section ul {
       padding-left: 1.2em;
-      margin-bottom: 4px;            /* was 5px */
-      margin-top: 2px;
+      margin-bottom: 3px;
+      margin-top: 1px;
     }
     .ann-section li {
-      margin-bottom: 2px;            /* was 3px (~33% tighter) */
+      margin-bottom: 1px;
       font-size: 10pt;
-      line-height: 1.35;
+      line-height: 1.28;
     }
     /* Tighter copy-verbatim line spacing — collapse the intra-block blank lines */
-    .copy-verbatim { line-height: 1.32 !important; }
+    .copy-verbatim { line-height: 1.22 !important; white-space: pre-wrap; }
     .ann-label {
       font-weight: 700;
       color: #3D2B1F;
@@ -759,51 +759,22 @@ ready to turn up</div>
 
     <div class="ann-section">
       <h4>Legal &amp; Compliance Language</h4>
-      <p><span class="ann-label">Why this language is here:</span> All figures trace to AIDSVu 2023, displayed as published — no modeling. Numbers per 100,000 population.</p>
-      <p><span class="ann-label">Concerns this addresses:</span></p>
-      <ul>
-        <li>No clinical claims — observational published rates only</li>
-        <li>Proportional disclaimer prevents single-dot misreading</li>
-        <li>User's personal PrEP answer never overlaid on public data</li>
-      </ul>
-      <p><span class="ann-label">Source:</span> AIDSVu 2023 — national, state, and county HIV prevalence and PrEP coverage rates.</p>
+      <p><span class="ann-label">Why this language is here:</span> AIDSVu 2023 figures displayed as published — no modeling. Per 100,000 population.</p>
+      <p><span class="ann-label">Concerns addressed:</span> no clinical claims; proportional disclaimer; user's personal PrEP answer never overlaid on public data.</p>
       <p><span class="ann-label">Legal basis:</span> Public AIDSVu data. No PHI. State HIV confidentiality statutes preserved.</p>
     </div>
 
     <div class="ann-section">
       <h4 class="green">Copy on Frame (Verbatim)</h4>
-      <div class="copy-verbatim">the feed
-filter
-[list / grid / map toggle icons]
-type a state, city, or zip
+      <div class="copy-verbatim">the feed · filter · [list/grid/map toggle] · type a state, city, or zip
 
-[US dot map]
-on PrEP     living with HIV
-proportional representation · not geographic
-
-united states
-16.1   PREP PER DIAGNOSIS   16.1 people on prep for every new diagnosis
-177    ON PREP              177 of every 100,000 are on prep
-aidsvu 2023
-
-new york city    los angeles
-
+[US dot map] on PrEP / living with HIV / proportional · not geographic
+united states · 16.1 PREP PER DIAGNOSIS · 177 ON PREP per 100,000 · aidsvu 2023
+new york city · los angeles
 ---
-
-[NYC dot map]
-new york city
-23.2   PREP PER DIAGNOSIS   23.2 people on prep for every new diagnosis
-684    ON PREP              604 of every 100,000 are on prep
-aidsvu 2023
-
+[NYC dot map] new york city · 23.2 PREP PER DIAGNOSIS · 684 ON PREP per 100,000 · aidsvu 2023
 ---
-
-brook [typed]     clear
-brooklyn
-NY · city
-
-brooklyn
-kings county</div>
+brook [typed] · clear · brooklyn (NY · city) · brooklyn · kings county</div>
     </div>
   </div>
 </div>
@@ -853,18 +824,13 @@ everything you share tonight is deleted within 24 hours.</div>
   <div class="frame-annotations">
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
-      <p><span class="ann-label">Summary:</span> Introduces the kiosk experience and sets expectations for the interactive journey ahead. Presents Terms of Use and Privacy Policy links before the user proceeds, ensuring informed consent is established at the outset.</p>
-      <p><span class="ann-label">User Action:</span> Reads the introductory copy and taps "let's go" to continue, or "just browse the feed" to skip onboarding. Terms of Use and Privacy Policy links are accessible on this screen.</p>
+      <p><span class="ann-label">Summary:</span> Sets expectations for the interactive journey and surfaces Terms of Use / Privacy Policy links before any data collection.</p>
+      <p><span class="ann-label">User Action:</span> Taps "let's go" to continue or "just browse the feed" to skip onboarding.</p>
     </div>
 
     <div class="ann-section">
       <h4>Legal &amp; Compliance Language</h4>
-      <p><span class="ann-label">Why this language is here:</span> The Terms of Use and Privacy Policy links are surfaced before any data collection begins. This ensures that users have an opportunity to review applicable terms before opting into the experience.</p>
-      <p><span class="ann-label">Concerns this addresses:</span></p>
-      <ul>
-        <li>Informed consent prior to data collection</li>
-        <li>Accessibility of legal terms before engagement</li>
-      </ul>
+      <p><span class="ann-label">Why this language is here:</span> Terms of Use and Privacy Policy links are surfaced before any data collection, supporting informed consent.</p>
     </div>
 
     <div class="ann-section">
@@ -914,17 +880,9 @@ terms of use · privacy policy</div>
 
     <div class="ann-section">
       <h4>Legal &amp; Compliance Language</h4>
-      <p><span class="ann-label">Why this language is here:</span> Only place in the experience where full ISI-style PrEP language appears. Uses FDA-aligned description, Gilead-approved efficacy statement, required STI non-protection disclaimer, and a healthcare-provider redirect. This keeps downstream screens non-clinical.</p>
-      <p><span class="ann-label">Key phrasing decisions:</span></p>
-      <ul>
-        <li>"awareness of PrEP" — not "PrEP status" — avoids patient self-identification</li>
-        <li>"about 99% effective in preventing HIV through sex" — Gilead-approved efficacy; "about" and "through sex" are load-bearing</li>
-        <li>"PrEP doesn't protect against other STIs" — required safety language</li>
-        <li>"talk to your healthcare provider" — redirects medical questions off-platform</li>
-        <li>"if you don't want to share or join the feed, you don't have to" — explicit opt-out</li>
-      </ul>
-      <p><span class="ann-label">Concerns:</span> FDA efficacy claim requirements; STI disclosure; informed consent for data collection; non-medical positioning of downstream experience.</p>
-      <p><span class="ann-label">Legal basis:</span> FDA ISI requirements; Gilead brand compliance; state HIV confidentiality statutes; TCPA (phone collection requires prior express consent, satisfied by "got it").</p>
+      <p><span class="ann-label">Why this language is here:</span> Only place in the experience with full ISI-style PrEP language: FDA-aligned description, Gilead-approved efficacy, STI non-protection disclaimer, healthcare-provider redirect. Keeps downstream screens non-clinical.</p>
+      <p><span class="ann-label">Key phrasing:</span> "awareness of PrEP" (not "status"); "about 99% effective in preventing HIV through sex" (Gilead-approved); STI disclaimer; HCP redirect; explicit opt-out.</p>
+      <p><span class="ann-label">Legal basis:</span> FDA ISI; Gilead brand compliance; state HIV confidentiality; TCPA (consent satisfied by "got it").</p>
     </div>
 
     <div class="ann-section">
@@ -1147,21 +1105,10 @@ skip</div>
 
     <div class="ann-section">
       <h4>Legal &amp; Compliance Language</h4>
-      <p><span class="ann-label">Why this language is here:</span> Opens with "we're about to show you how aware your community actually is" — "aware" is the PRC-approved framing from the language guidelines, in place of "protected", "at risk", or "unaware of their status". The three color labels are deliberately neutral: "on PrEP" is observational, "living with HIV" is person-first language preferred by community advocates, and "neither" is non-clinical (rather than "untreated" or "unprotected", which would make clinical claims).</p>
-      <p><span class="ann-label">Key phrasing decisions:</span></p>
-      <ul>
-        <li>"how aware your community actually is" — aware/unaware framing per guidelines</li>
-        <li>"prevalence data" — observational, not causal</li>
-        <li>"living with HIV" — person-first, community-preferred</li>
-        <li>"neither" — neutral third category, no clinical inference</li>
-      </ul>
-      <p><span class="ann-label">Concerns this addresses:</span></p>
-      <ul>
-        <li>No clinical claims in the color key or subsequent frames</li>
-        <li>No fear-based or stigmatizing framing</li>
-        <li>Consistent visual grammar applied across every data frame that follows</li>
-      </ul>
-      <p><span class="ann-label">Legal basis:</span> Language guidelines approved for PRC review; no clinical claims. Public data context applies (AIDSVu 2023 is cited on each subsequent data frame).</p>
+      <p><span class="ann-label">Why this language is here:</span> "Aware" framing per PRC-approved language guidelines (in place of "protected" / "at risk" / "unaware"). Color labels are neutral: "on PrEP" observational, "living with HIV" person-first, "neither" non-clinical.</p>
+      <p><span class="ann-label">Key phrasing decisions:</span> "how aware your community actually is"; "prevalence data" (observational); "living with HIV" (person-first); "neither" (neutral third category).</p>
+      <p><span class="ann-label">Concerns addressed:</span> no clinical claims, no fear/stigmatizing framing, consistent visual grammar across all data frames.</p>
+      <p><span class="ann-label">Legal basis:</span> Approved language guidelines; no clinical claims. AIDSVu 2023 cited on each data frame.</p>
     </div>
 
     <div class="ann-section">
@@ -1233,35 +1180,30 @@ continue</div>
   <div class="frame-annotations">
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
-      <p><span class="ann-label">Summary:</span> Displays the growth of PrEP coverage nationally from 2012 to 2023 using an interactive timeline slider. The "connected" variant is shown to users who indicated a relationship to PrEP and uses affirming narrative language.</p>
-      <p><span class="ann-label">User Action:</span> Drags the timeline slider from 2012 to 2023. Reads the contextual sentences that update as the slider moves. Taps "see your community" to continue.</p>
+      <p><span class="ann-label">Summary:</span> Growth of national PrEP coverage 2012→2023 via interactive slider. Connected variant uses affirming narrative for users with PrEP relationship.</p>
+      <p><span class="ann-label">User Action:</span> Drags slider; taps "see your community".</p>
     </div>
 
     <div class="ann-section">
       <h4>Customized Copy by PrEP Answer</h4>
       <div class="callout-box">
-        <p><span class="ann-label">Connected variant:</span> Shows affirming language acknowledging the user's relationship to PrEP and the broader community impact.</p>
-        <p><span class="ann-label">Rationale:</span> Tailored narrative creates a more relevant experience. Users who selected "connected" receive language that validates their awareness while presenting national trend data. No clinical claims are made.</p>
+        <p><span class="ann-label">Connected variant:</span> Affirming language acknowledging the user's PrEP relationship and community impact. No clinical claims.</p>
       </div>
     </div>
 
     <div class="ann-section">
       <h4>How the Data Is Calculated</h4>
       <div class="data-callout">
-        <span class="dc-label">Source:</span> AIDSVu 2023, national-level annual new HIV diagnoses and PrEP users
+        <span class="dc-label">Source:</span> AIDSVu 2023, national-level annual new HIV diagnoses + PrEP users
       </div>
       <div class="data-callout">
-        <span class="dc-label">How we calculate it</span> Direct display of AIDSVu-published rates. No derivation, modeling, or inference.
-      </div>
-      <div class="data-callout">
-        <span class="dc-label">Any AI or algorithmic inference</span> None
+        <span class="dc-label">How we calculate it</span> Direct display of AIDSVu rates. No derivation/modeling/inference.
       </div>
     </div>
 
     <div class="ann-section">
       <h4>How the Data Is Visualized</h4>
-      <p>250-dot proportional visualization on a US map shape. Dot distribution represents relative rates across a timeline. Not geographic placement. Timeline slider animates from 2012 to 2023 end-state. Dot colors shift proportionally to represent changing rates over time.</p>
-      <p><span class="ann-label">Why this visual treatment:</span> Animation draws attention to the trend direction without requiring the user to interpret charts or graphs. Dot-based display avoids precision claims.</p>
+      <p>250-dot proportional viz on US map shape. Slider animates 2012→2023; dot colors shift proportionally. Not geographic placement.</p>
     </div>
 
     <div class="ann-section">
@@ -1293,34 +1235,30 @@ aidsvu 2023 / see your community</div>
   <div class="frame-annotations">
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
-      <p><span class="ann-label">Summary:</span> Displays the same national HIV diagnosis timeline (2012 to 2023) as the connected variant, but uses introductory narrative language appropriate for users who are new to PrEP or who skipped the PrEP question.</p>
-      <p><span class="ann-label">User Action:</span> Drags the timeline slider from 2012 to 2023. Reads the contextual sentences. Taps "see your community" to continue.</p>
+      <p><span class="ann-label">Summary:</span> Same national 2012→2023 HIV diagnosis timeline as the connected variant; introductory narrative for new/skipped users.</p>
+      <p><span class="ann-label">User Action:</span> Drags slider; taps "see your community".</p>
     </div>
 
     <div class="ann-section">
       <h4>Customized Copy by PrEP Answer</h4>
       <div class="callout-box">
-        <p><span class="ann-label">New/Skipped variant:</span> Uses introductory, non-presumptive language. Does not assume the user has prior knowledge of PrEP or HIV data.</p>
-        <p><span class="ann-label">Rationale:</span> Users who selected "new to prep" or who skipped the question receive language that introduces data without assuming familiarity. No clinical claims are made. Same underlying data as the connected variant.</p>
+        <p><span class="ann-label">New/Skipped variant:</span> Introductory, non-presumptive language; no assumed familiarity. Same underlying data as connected; no clinical claims.</p>
       </div>
     </div>
 
     <div class="ann-section">
       <h4>How the Data Is Calculated</h4>
       <div class="data-callout">
-        <span class="dc-label">Source:</span> AIDSVu 2023, national-level annual new HIV diagnoses and PrEP users
+        <span class="dc-label">Source:</span> AIDSVu 2023, national-level annual new HIV diagnoses + PrEP users
       </div>
       <div class="data-callout">
-        <span class="dc-label">How we calculate it</span> Direct display of AIDSVu-published rates. No derivation, modeling, or inference.
-      </div>
-      <div class="data-callout">
-        <span class="dc-label">Any AI or algorithmic inference</span> None
+        <span class="dc-label">How we calculate it</span> Direct display of AIDSVu rates. No derivation/modeling/inference.
       </div>
     </div>
 
     <div class="ann-section">
       <h4>How the Data Is Visualized</h4>
-      <p>250-dot proportional visualization on a US map shape. Dot distribution represents relative rates across a timeline. Not geographic placement. Identical visual treatment to connected variant.</p>
+      <p>250-dot proportional viz on US map; identical treatment to connected. Not geographic placement.</p>
     </div>
 
     <div class="ann-section">
@@ -1636,32 +1574,19 @@ aidsvu 2023</div>
   <div class="frame-annotations">
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
-      <p><span class="ann-label">Summary:</span> Displays Manhattan (New York County) PrEP/HIV data on the state map. New/skipped variant uses introductory, non-presumptive narrative for users new to PrEP or who skipped the question.</p>
-      <p><span class="ann-label">User Action:</span> Views the city data card. Swipes to next city or taps "see your impact". "Previous" returns to prior city.</p>
+      <p><span class="ann-label">Summary:</span> Displays Manhattan (New York County) PrEP/HIV data on the state map. New/skipped variant uses introductory, non-presumptive narrative.</p>
+      <p><span class="ann-label">User Action:</span> Views the card; swipes or taps "see your impact" / "previous".</p>
     </div>
 
     <div class="ann-section">
       <h4>Legal &amp; Compliance Language</h4>
-      <p><span class="ann-label">Why this language is here:</span> "this is what hiv prevention looks like in your zip code" is observational and non-presumptive — it describes the data picture without implying the user should take a particular action. No clinical claims. No "at risk" framing. "On PrEP" uses the approved non-clinical label. Every rate is per 100,000 per language guidelines.</p>
-      <p><span class="ann-label">Concerns this addresses:</span></p>
-      <ul>
-        <li>Non-presumptive tone for users new to PrEP or who declined to answer</li>
-        <li>No clinical claims, no causal framing</li>
-        <li>"per 100,000" formatting enforced per guidelines</li>
-      </ul>
-      <p><span class="ann-label">Legal basis:</span> Public AIDSVu 2023 data. No PHI. State HIV confidentiality statutes preserved.</p>
+      <p>"this is what hiv prevention looks like in your zip code" — observational, non-presumptive. No clinical claims. Rates per 100,000. <span class="ann-label">Legal basis:</span> Public AIDSVu 2023; no PHI; state HIV confidentiality preserved.</p>
     </div>
 
     <div class="ann-section">
       <h4>How the Data Is Calculated</h4>
       <div class="data-callout">
-        <span class="dc-label">Source:</span> AIDSVu 2023, county-level HIV diagnosis and PrEP rates (New York County)
-      </div>
-      <div class="data-callout">
-        <span class="dc-label">How we calculate it</span> Direct display of AIDSVu-published rates. "PrEP per diagnosis" = prepRate / newDxRate. No modeling or inference.
-      </div>
-      <div class="data-callout">
-        <span class="dc-label">Any AI or algorithmic inference</span> None
+        <span class="dc-label">Source / method:</span> AIDSVu 2023, county-level (NYC). Direct display of published rates. "PrEP per diagnosis" = prepRate / newDxRate. No modeling, inference, or AI.
       </div>
     </div>
 
@@ -1706,32 +1631,19 @@ previous</div>
   <div class="frame-annotations">
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
-      <p><span class="ann-label">Summary:</span> Displays PrEP coverage and HIV prevalence for Queens (Queens County) on the same state map dot visualization as the connected variant. The new/skipped variant uses introductory, non-presumptive narrative language and acts as the final city card before the impact sequence begins.</p>
-      <p><span class="ann-label">User Action:</span> Views the city data card and taps "see your impact" to advance into the impact intro, or "previous" to return to the prior city.</p>
+      <p><span class="ann-label">Summary:</span> Displays Queens (Queens County) PrEP/HIV data on the state map. New/skipped variant uses introductory, non-presumptive narrative; final city card before impact sequence.</p>
+      <p><span class="ann-label">User Action:</span> Views the card; taps "see your impact" or "previous".</p>
     </div>
 
     <div class="ann-section">
       <h4>Legal &amp; Compliance Language</h4>
-      <p><span class="ann-label">Why this language is here:</span> "now you've seen how prep shows up in your area" is observational and closing — it summarizes the just-viewed sequence without prescribing action or implying the user needs PrEP. This closing line is what transitions the user out of the geographic data sequence, so it is intentionally neutral. All rates per 100,000 per guidelines.</p>
-      <p><span class="ann-label">Concerns this addresses:</span></p>
-      <ul>
-        <li>Non-presumptive closing line — no call to action based on health data</li>
-        <li>No clinical claims, no causal framing</li>
-        <li>Consistent per-100,000 formatting</li>
-      </ul>
-      <p><span class="ann-label">Legal basis:</span> Public AIDSVu 2023 data. No PHI. State HIV confidentiality statutes preserved.</p>
+      <p>"now you've seen how prep shows up in your area" — observational, neutral closing. No clinical claims. Rates per 100,000. <span class="ann-label">Legal basis:</span> Public AIDSVu 2023; no PHI; state HIV confidentiality preserved.</p>
     </div>
 
     <div class="ann-section">
       <h4>How the Data Is Calculated</h4>
       <div class="data-callout">
-        <span class="dc-label">Source:</span> AIDSVu 2023, county-level HIV diagnosis and PrEP rates (Queens County)
-      </div>
-      <div class="data-callout">
-        <span class="dc-label">How we calculate it</span> Direct display of AIDSVu-published rates. "PrEP per diagnosis" = prepRate / newDxRate. No modeling or inference.
-      </div>
-      <div class="data-callout">
-        <span class="dc-label">Any AI or algorithmic inference</span> None
+        <span class="dc-label">Source / method:</span> AIDSVu 2023, county-level (Queens). Direct display of published rates. "PrEP per diagnosis" = prepRate / newDxRate. No modeling, inference, or AI.
       </div>
     </div>
 
@@ -1823,20 +1735,17 @@ continue</div>
   <div class="frame-annotations">
     <div class="ann-section">
       <h4>Purpose &amp; Intent</h4>
-      <p><span class="ann-label">Summary:</span> First card in the five-card identity carousel. Displays the overall PrEP coverage and HIV prevalence rates for the user's county. A persistent drag map is rendered above the card showing the county shape with dots. The user's photo appears as a draggable element on the map. Progress indicator shows 1 of 5.</p>
-      <p><span class="ann-label">User Action:</span> Reads the overall county data. Swipes to the next card.</p>
+      <p><span class="ann-label">Summary:</span> First card in the five-card identity carousel. Displays overall county PrEP coverage and HIV prevalence. Persistent drag map above shows the county shape; user's photo appears as a draggable element. Progress 1 of 5.</p>
+      <p><span class="ann-label">User Action:</span> Reads the data. Swipes to next card.</p>
     </div>
 
     <div class="ann-section">
       <h4>How the Data Is Calculated</h4>
       <div class="data-callout">
-        <span class="dc-label">Source:</span> AIDSVu 2023, county-level overall HIV prevalence and PrEP coverage
+        <span class="dc-label">Source:</span> AIDSVu 2023, county-level overall HIV prevalence + PrEP coverage
       </div>
       <div class="data-callout">
-        <span class="dc-label">Fields used</span> PrEP coverage per 100,000 (overall), HIV prevalence per 100,000 (overall), county-level
-      </div>
-      <div class="data-callout">
-        <span class="dc-label">How we calculate it</span> Direct display of AIDSVu-published rates. No derivation, modeling, or inference.
+        <span class="dc-label">How we calculate it</span> Direct display of AIDSVu-published rates per 100,000 (overall, county-level). No derivation, modeling, or inference.
       </div>
       <div class="data-callout">
         <span class="dc-label">Any AI or algorithmic inference</span> None
@@ -2140,15 +2049,8 @@ skip</div>
 
     <div class="ann-section">
       <h4>Legal &amp; Compliance Language</h4>
-      <p><span class="ann-label">Why this language is here:</span> All four vibe options are social mood descriptors with no health, risk, or clinical overtones. Vibes are used ONLY for feed filtering and never combined with PrEP answer, zip, or any health-related data.</p>
-      <p><span class="ann-label">Key phrasing decisions:</span></p>
-      <ul>
-        <li>Each vibe has a warm social tagline — not clinical</li>
-        <li>No option implies sexual activity, PrEP use, or HIV status</li>
-        <li>Skip link preserves user autonomy</li>
-        <li>Vibes not transmitted to Gilead or stored beyond the session</li>
-      </ul>
-      <p><span class="ann-label">Concerns:</span> placement AFTER data moments ensures vibe selection does not pull focus from health education; no health-based matching on social surface; skip preserves autonomy.</p>
+      <p><span class="ann-label">Why this language is here:</span> All four vibes are social mood descriptors — no health/risk/clinical overtones. Used ONLY for feed filtering; never combined with PrEP answer, zip, or health data.</p>
+      <p><span class="ann-label">Key phrasing decisions:</span> warm social taglines (not clinical); no option implies sexual activity, PrEP use, or HIV status; skip preserves autonomy; vibes not transmitted to Gilead or stored beyond session.</p>
       <p><span class="ann-label">Legal basis:</span> Social preferences are not PHI. No clinical claims. No linkage to PrEP answer.</p>
     </div>
 
@@ -2293,19 +2195,9 @@ Learn more about why HIV Prevention is important to your community and where to 
 
     <div class="ann-section">
       <h4>Legal &amp; Compliance Language</h4>
-      <p><span class="ann-label">Why this language is here:</span> TCPA (Telephone Consumer Protection Act) requires clear disclosure and consent before sending text messages. The on-screen language includes: message frequency varies, message and data rates may apply, reply STOP to opt out. This language is displayed before the user submits their number.</p>
-      <p><span class="ann-label">Stakeholder guidance that shaped this:</span></p>
-      <ul>
-        <li>Gilead Legal guidance confirmed TCPA compliance language requirements for SMS opt-in at kiosk point of collection.</li>
-      </ul>
-      <p><span class="ann-label">Concerns this addresses:</span></p>
-      <ul>
-        <li>TCPA compliance for SMS messaging</li>
-        <li>Clear opt-out mechanism (reply STOP)</li>
-        <li>Frequency and rate disclosures</li>
-        <li>User can skip without providing phone number</li>
-      </ul>
-      <p><span class="ann-label">Legal basis:</span> TCPA (Telephone Consumer Protection Act). 10DLC registration for SMS sending compliance.</p>
+      <p><span class="ann-label">Why this language is here:</span> TCPA-compliant SMS opt-in: frequency varies, msg &amp; data rates apply, reply STOP to opt out. Shown before submission. Per Gilead Legal guidance.</p>
+      <p><span class="ann-label">Concerns addressed:</span> TCPA compliance, opt-out mechanism, frequency/rate disclosure, skip path preserved.</p>
+      <p><span class="ann-label">Legal basis:</span> TCPA. 10DLC SMS registration.</p>
     </div>
 
     <div class="ann-section">
@@ -2533,12 +2425,12 @@ next</div>
     let tries = 0;
     const setSize = (s) => {
       ann.style.fontSize = s + 'pt';
-      const lh = Math.max(1.15, 1.45 - (12 - s) * 0.02);
+      const lh = Math.max(1.1, 1.4 - (12 - s) * 0.02);
       ann.style.lineHeight = lh;
     };
     setSize(size);
-    // Shrink until fits — prefer ≥9pt; absolute floor 5pt for the densest slides
-    while (ann.scrollHeight > ann.clientHeight + 1 && size > 5 && tries < 100) {
+    // Shrink until fits — prefer ≥9pt; floor 4pt for densest slides
+    while (ann.scrollHeight > ann.clientHeight + 1 && size > 4 && tries < 200) {
       size -= 0.25;
       setSize(size);
       tries++;
