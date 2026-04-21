@@ -1,0 +1,133 @@
+/* PRC Submission Deck Styles */
+/* Overrideable via design deck CSS variables */
+
+:root {
+  --color-primary: #231F20;
+  --color-accent-green: #4CAF50;
+  --color-accent-rust: #6B4226;
+  --color-muted: #5B5563;
+  --color-bg: #FAFAF8;
+  --color-card-bg: #FFFFFF;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Inter', system-ui, sans-serif;
+}
+
+@page {
+  size: 11in 8.5in;
+  margin: 0.5in;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 11pt;
+  line-height: 1.4;
+  color: var(--color-primary);
+  background: var(--color-bg);
+}
+
+/* Cover */
+.cover-page {
+  page-break-after: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 7in;
+  text-align: center;
+}
+.cover-page h1 { font-size: 28pt; font-weight: 700; margin-bottom: 0.3in; }
+.cover-page h2 { font-size: 16pt; font-weight: 400; color: var(--color-muted); margin-bottom: 0.5in; }
+.cover-page .meta { font-size: 10pt; color: var(--color-muted); line-height: 1.8; }
+
+/* TOC */
+.toc-page { page-break-after: always; padding: 0.5in 0; }
+.toc-page h2 { font-size: 18pt; margin-bottom: 0.3in; }
+.toc-entry { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #eee; font-size: 10pt; }
+
+/* Frame pages */
+.frame-page {
+  page-break-before: always;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 0.4in;
+  min-height: 7in;
+}
+
+.frame-header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 6px;
+  margin-bottom: 0.2in;
+}
+.frame-header h3 { font-size: 14pt; font-weight: 700; }
+
+.frame-screenshot { display: flex; align-items: flex-start; }
+.frame-screenshot img {
+  width: 100%;
+  height: auto;
+  max-height: 6.5in;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.frame-annotations { font-size: 10pt; line-height: 1.5; }
+
+.annotation-section { margin-bottom: 0.2in; }
+.annotation-section h4 {
+  font-size: 10pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent-green);
+  margin-bottom: 4px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2px;
+}
+.annotation-section p { margin-bottom: 4px; }
+.annotation-section ul { padding-left: 1.2em; margin-bottom: 4px; }
+.annotation-section li { margin-bottom: 2px; }
+
+.part-number-field {
+  background: #FFFFCC;
+  border-bottom: 1px solid #333;
+  display: inline-block;
+  min-width: 2in;
+  padding: 2px 8px;
+  font-family: monospace;
+  font-size: 9pt;
+}
+
+.copy-verbatim {
+  background: #f5f5f0;
+  border-left: 3px solid var(--color-accent-green);
+  padding: 8px 12px;
+  font-size: 9pt;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  max-height: 2.5in;
+  overflow-y: auto;
+}
+
+.variant-label {
+  display: inline-block;
+  font-size: 8pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 8px;
+}
+.variant-connected { background: #E8F5E9; color: #2E7D32; }
+.variant-new { background: #E3F2FD; color: #1565C0; }
+
+/* Appendix */
+.appendix-page { page-break-before: always; }
+.appendix-page h2 { font-size: 16pt; margin-bottom: 0.2in; }
+.appendix-page h3 { font-size: 12pt; margin-top: 0.15in; margin-bottom: 0.05in; }

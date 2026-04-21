@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Care for the Culture - Speaker Notes</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #1a1a1a;
+      color: #f0ede6;
+      line-height: 1.6;
+    }
+
+    .header {
+      background: #3D2B1F;
+      padding: 40px 60px;
+      border-bottom: 4px solid #C5E534;
+    }
+    .header h1 {
+      font-size: 32px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #C5E534;
+      letter-spacing: -0.5px;
+    }
+    .header p {
+      color: rgba(240,237,230,0.6);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .slide-note {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .slide-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #C5E534;
+      margin-bottom: 8px;
+    }
+
+    .slide-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .slide-thumb {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 12px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .talk-track {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.7;
+      color: #f0ede6;
+    }
+    .talk-track p {
+      margin-bottom: 20px;
+    }
+    .talk-track .emphasis {
+      color: #C5E534;
+      font-weight: 600;
+    }
+    .talk-track .pause {
+      display: block;
+      color: rgba(255,255,255,0.3);
+      font-size: 14px;
+      font-style: italic;
+      margin: 16px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .nav-footer {
+      text-align: center;
+      padding: 40px;
+      color: rgba(255,255,255,0.3);
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Speaker Notes</h1>
+  <p>Care for the Culture / PRC Submission Walkthrough / April 2026</p>
+</div>
+
+<!-- SLIDE 1: COVER -->
+<div class="slide-note">
+  <div class="slide-label">Slide 1</div>
+  <div class="slide-title">Cover</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-01.png" alt="Cover">
+  <div class="talk-track">
+    <p>This is <span class="emphasis">Care for the Culture</span>, a kiosk experience designed for Freddie events in New York and LA.</p>
+    <p>The kiosk lives inside the party. It collects a photo, a zip code, and one question about PrEP awareness. In return, it shows each person how HIV prevention data looks in their own neighborhood.</p>
+    <p>Everything you see here has been built, tested, and is ready for review.</p>
+  </div>
+</div>
+
+<!-- SLIDE 2: HOME -->
+<div class="slide-note">
+  <div class="slide-label">Slide 2</div>
+  <div class="slide-title">Home</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-02.png" alt="Home">
+  <div class="talk-track">
+    <p>This is what the kiosk looks like when nobody's using it. A scrolling feed of photos from people who've already gone through the experience tonight.</p>
+    <p>The screen says <span class="emphasis">"tap to start"</span> and a small line at the bottom: <span class="emphasis">"everything you share tonight is deleted within 24 hours."</span></p>
+    <p>That's the privacy promise, visible before anyone engages.</p>
+  </div>
+</div>
+
+<!-- SLIDE 3: ONBOARDING -->
+<div class="slide-note">
+  <div class="slide-label">Slide 3</div>
+  <div class="slide-title">Onboarding</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-03.png" alt="Onboarding">
+  <div class="talk-track">
+    <p><span class="emphasis">"The feed, tonight only."</span> That's the headline.</p>
+    <p>This screen explains the entire experience in plain language. What we collect, what we don't, and what they walk away with. No account, no download, no ads. Gone by morning.</p>
+    <p>Terms of Use and Privacy Policy links are accessible here, before any data collection begins.</p>
+    <p>Two options: <span class="emphasis">"let's go"</span> to start, or <span class="emphasis">"just browse the feed"</span> to skip everything and look at other people's cards.</p>
+  </div>
+</div>
+
+<!-- SLIDE 4: PHOTO CAPTURE -->
+<div class="slide-note">
+  <div class="slide-label">Slide 4</div>
+  <div class="slide-title">Photo Capture</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-04.png" alt="Photo Capture">
+  <div class="talk-track">
+    <p>Simple camera screen. <span class="emphasis">"Your turn."</span></p>
+    <p>The photo is processed locally on the kiosk. It's used to generate their card and goes nowhere else.</p>
+  </div>
+</div>
+
+<!-- SLIDE 5: PHOTO REVIEW -->
+<div class="slide-note">
+  <div class="slide-label">Slide 5</div>
+  <div class="slide-title">Photo Review</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-05.png" alt="Photo Review">
+  <div class="talk-track">
+    <p>They see their photo and choose: <span class="emphasis">"looks good"</span> or <span class="emphasis">"retake."</span></p>
+    <p>Full control over their image before anything moves forward.</p>
+  </div>
+</div>
+
+<!-- SLIDE 6: ZIP CODE -->
+<div class="slide-note">
+  <div class="slide-label">Slide 6</div>
+  <div class="slide-title">Zip Code Entry</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-06.png" alt="Zip Code">
+  <div class="talk-track">
+    <p>We ask for their zip code. This is the minimum geographic identifier needed to pull county-level data from AIDSVu.</p>
+    <p>It's mapped to a county using a static lookup table. No geolocation services. Not stored after the session. They can skip this entirely.</p>
+  </div>
+</div>
+
+<!-- SLIDE 7: PREP QUESTION -->
+<div class="slide-note">
+  <div class="slide-label">Slide 7</div>
+  <div class="slide-title">PrEP Question</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-07.png" alt="PrEP Question">
+  <div class="talk-track">
+    <p><span class="emphasis">"Does prep show up in your world?"</span></p>
+    <p>Two options: "I'm on prep or know someone who is" and "Not on prep or new to prep." Plus a skip button.</p>
+    <p>This was originally four options. Gilead compliance recommended collapsing to two so that selecting either option does not identify the user as a patient. The phrasing "or know someone who is" is deliberate.</p>
+    <p>This answer shapes the narrative tone on later screens. It is never displayed as text, only as a color tint. It is stored separately from the photo.</p>
+  </div>
+</div>
+
+<!-- SLIDE 8: DATA INTRO -->
+<div class="slide-note">
+  <div class="slide-label">Slide 8</div>
+  <div class="slide-title">Data Intro (Color Key)</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-08.png" alt="Data Intro">
+  <div class="talk-track">
+    <p><span class="emphasis">"We're about to show you how aware your community actually is."</span></p>
+    <p>This screen sets up the visual language. Green dots mean on PrEP. Brown dots mean living with HIV. Gray means neither. This key stays consistent through every data screen that follows.</p>
+  </div>
+</div>
+
+<!-- SLIDE 9: NATIONAL TIMELINE (CONNECTED) -->
+<div class="slide-note">
+  <div class="slide-label">Slide 9</div>
+  <div class="slide-title">National Timeline (Connected Variant)</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-09.png" alt="National Timeline Connected">
+  <div class="talk-track">
+    <p>The user drags a slider from 2012 to 2023 and watches PrEP coverage grow across the country. 250 dots on a US map, shifting from gray to green as the number climbs.</p>
+    <p>At the end: <span class="emphasis">"Half a million people are on prep across the country. You or someone you know is already in that number."</span></p>
+    <p>All data comes directly from AIDSVu. No modeling, no inference.</p>
+  </div>
+</div>
+
+<!-- SLIDE 10: NATIONAL TIMELINE (NEW) -->
+<div class="slide-note">
+  <div class="slide-label">Slide 10</div>
+  <div class="slide-title">National Timeline (New/Skipped Variant)</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-10.png" alt="National Timeline New">
+  <div class="talk-track">
+    <p>Same data visualization, different closing language.</p>
+    <p>For someone new to PrEP: <span class="emphasis">"Tonight you're part of the conversation."</span></p>
+    <p>The data is identical. Only the affirming sentence changes based on their earlier answer.</p>
+  </div>
+</div>
+
+<!-- SLIDES 11-14: BOROUGHS CONNECTED -->
+<div class="slide-note">
+  <div class="slide-label">Slides 11-14</div>
+  <div class="slide-title">Borough Data (Connected Variant)</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-11.png" alt="Borough Brooklyn Connected">
+  <div class="talk-track">
+    <p>Now we zoom into New York State. The user swipes through four boroughs: Brooklyn, The Bronx, Manhattan, Queens.</p>
+    <p>Each card shows PrEP coverage and HIV prevalence on the same map. The dots shift proportionally per borough so you can see the gap visually.</p>
+    <p>The numbers are real. Brooklyn: 542 of every 100,000 on PrEP. 1,225 of every 100,000 living with HIV. 24.6 people on PrEP for every new diagnosis.</p>
+    <p>An affirming sentence rotates per borough. For connected users, things like: <span class="emphasis">"You already know prep exists, but not everyone in your area does."</span></p>
+  </div>
+</div>
+
+<!-- SLIDES 15-16: BOROUGHS NEW -->
+<div class="slide-note">
+  <div class="slide-label">Slides 15-16</div>
+  <div class="slide-title">Borough Data (New/Skipped Variant)</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-15.png" alt="Borough Brooklyn New">
+  <div class="talk-track">
+    <p>Same borough data, different narrative for someone new to PrEP.</p>
+    <p><span class="emphasis">"This is your neighborhood's prep picture. Now you've seen it."</span></p>
+    <p>Observational, not prescriptive. We show them the numbers and let the data speak.</p>
+  </div>
+</div>
+
+<!-- SLIDE 17: IMPACT INTRO -->
+<div class="slide-note">
+  <div class="slide-label">Slide 17</div>
+  <div class="slide-title">Impact Intro</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-17.png" alt="Impact Intro">
+  <div class="talk-track">
+    <p><span class="emphasis">"Now let's zoom into your neighborhood."</span></p>
+    <p>This transitions from the state-level view to the county level. It introduces the awareness key: white dots for unaware of PrEP, blue for aware. The user is about to interact with the data directly.</p>
+  </div>
+</div>
+
+<!-- SLIDES 18-22: IDENTITY CARDS -->
+<div class="slide-note">
+  <div class="slide-label">Slides 18-22</div>
+  <div class="slide-title">Identity Cards (County Data + Drag Interaction)</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-18.png" alt="County Overall">
+  <div class="talk-track">
+    <p>Five swipeable cards, each showing a different cut of the county data.</p>
+    <p><span class="emphasis">Card 1: County Overall.</span> PrEP coverage vs HIV prevalence, side by side. The gap is visible immediately.</p>
+    <p><span class="emphasis">Card 2: By Race.</span> New diagnosis rates broken down. Black residents at 39 per 100,000. Hispanic at 36. White at 7. The awareness gap shows up in the numbers.</p>
+    <p><span class="emphasis">Card 3: By Age.</span> PrEP coverage concentrated in ages 25-34 at 1,384 per 100,000. Ages 55+ at just 118.</p>
+    <p><span class="emphasis">Card 4: By Gender.</span> 1,021 men per 100,000 on PrEP. 62 women. That's the widest gap in the entire experience.</p>
+    <p><span class="emphasis">Card 5: Spread Awareness.</span> The user drags their photo across the county map. White dots turn blue as they drag, representing awareness spreading. A counter tracks how many people they "reached."</p>
+    <p>All data is directly from AIDSVu. No inference, no modeling. The drag interaction is the emotional payoff of the entire experience.</p>
+  </div>
+</div>
+
+<!-- SLIDE 23: NAME ENTRY -->
+<div class="slide-note">
+  <div class="slide-label">Slide 23</div>
+  <div class="slide-title">Name Entry</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-23.png" alt="Name Entry">
+  <div class="talk-track">
+    <p><span class="emphasis">"What should we call you?"</span></p>
+    <p>Optional name and Instagram handle. This goes on their card in the feed. They can skip both.</p>
+  </div>
+</div>
+
+<!-- SLIDE 24: FEED OPT-IN -->
+<div class="slide-note">
+  <div class="slide-label">Slide 24</div>
+  <div class="slide-title">Feed Opt-In</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-24.png" alt="Feed Opt-In">
+  <div class="talk-track">
+    <p><span class="emphasis">"Show your card on the feed?"</span></p>
+    <p>They choose whether their card appears on the scrolling feed visible to the room. The disclosure: "Tonight's feed is shared with the room. It disappears by morning."</p>
+    <p>Either way, they get their printed card.</p>
+  </div>
+</div>
+
+<!-- SLIDE 25: PHOTO CARD -->
+<div class="slide-note">
+  <div class="slide-label">Slide 25</div>
+  <div class="slide-title">Photo Card (Physical Takeaway)</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-25.png" alt="Photo Card">
+  <div class="talk-track">
+    <p>This is the printed card. Every user gets one, regardless of whether they joined the feed or entered their phone number.</p>
+    <p>The card is intentionally blank. No text, no branding, no PrEP-related language. The photo is not tinted or color-coded based on their answer. This was a specific compliance requirement: the card cannot link the photo to any health-related response.</p>
+    <p>Future branding on the card would require a separate PRC submission.</p>
+  </div>
+</div>
+
+<!-- SLIDE 26: PHONE NUMBER -->
+<div class="slide-note">
+  <div class="slide-label">Slide 26</div>
+  <div class="slide-title">Phone Number</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-26.png" alt="Phone Number">
+  <div class="talk-track">
+    <p><span class="emphasis">"Get your photos."</span></p>
+    <p>They can enter their phone number to receive their photos via text, plus optional PrEP resources the next morning.</p>
+    <p>TCPA-compliant consent language is visible on screen. Message frequency varies. They can skip.</p>
+    <p>The phone number is stored separately from the PrEP answer. Session ID is the only join key, and it's purged within 24 hours.</p>
+  </div>
+</div>
+
+<!-- SLIDE 27: DONE -->
+<div class="slide-note">
+  <div class="slide-label">Slide 27</div>
+  <div class="slide-title">Done / QR</div>
+  <img class="slide-thumb" src="../output/slide-screenshots/slide-27.png" alt="Done">
+  <div class="talk-track">
+    <p>Final screen. A QR code to browse the feed on their phone. And the closing line: <span class="emphasis">"Your data will be deleted by tomorrow."</span></p>
+    <p>That's the full experience. Photo, zip code, one question, personalized data, printed card, and everything gone by morning.</p>
+    <span class="pause">end of walkthrough</span>
+  </div>
+</div>
+
+<div class="nav-footer">
+  <p>Care for the Culture / PRC Submission / Speaker Notes</p>
+  <p>HIV Prevention_Freddie Experiential Care for the Culture Kiosk_June 2026 US-UNBC-4189</p>
+</div>
+
+</body>
+</html>

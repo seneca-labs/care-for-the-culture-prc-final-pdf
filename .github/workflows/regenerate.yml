@@ -1,0 +1,32 @@
+name: Regenerate Deck
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: npx playwright install chromium
+      - name: Capture screenshots
+        run: npm run capture
+        env:
+          KIOSK_URL: ${{ secrets.KIOSK_URL || 'http://localhost:3000' }}
+      - name: Validate
+        run: npm run annotate -- --allow-drafted
+      - name: Build deck
+        run: npm run build
+      - name: Commit output
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add output/
+          git diff --cached --quiet || git commit -m "chore: regenerate deck"
+          git push

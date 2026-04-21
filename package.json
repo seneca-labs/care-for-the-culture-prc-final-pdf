@@ -1,0 +1,17 @@
+{
+  "name": "care-for-culture-prc",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "capture": "npx tsx src/capture/index.ts",
+    "annotate": "npx tsx src/validate/preflight.ts",
+    "build": "npx tsx src/assemble/index.ts",
+    "all": "npm run capture && npm run annotate && npm run build",
+    "single": "npx tsx src/capture/index.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}
